@@ -1,0 +1,406 @@
+:root {
+    --main-bg: #ffffff;
+    --accent-gold: #C5A059;
+    --text-dark: #1a1a1a;
+    --border-light: #eeeeee;
+    
+    /* Font Variables */
+    --font-header: 'Playfair Display', serif; /* Elegant & Fashionable */
+    --font-body: 'Montserrat', sans-serif;    /* Clean & Modern */
+}
+
+body {
+    background-color: var(--main-bg);
+    color: var(--text-dark);
+    font-family: var(--font-body); /* Default font for the whole site */
+    margin: 0;
+    line-height: 1.6;
+}
+
+body {
+    background-color: var(--main-bg);
+    color: var(--text-dark);
+    font-family: 'serif'; /* Serif fonts look more "luxury" for fashion */
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--border-light);
+    letter-spacing: 2px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 300; /* Thin font looks more expensive */
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #666; /* Muted grey for links */
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+nav ul {
+    list-style: none; /* Removes the dots */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+nav ul li a:hover {
+    color: var(--accent-gold); /* Turns gold when you hover/tap */
+}
+
+
+.hero {
+    padding: 100px 20px;
+    background-color: #fdfdfd; /* A slightly different white than the body */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+
+.hero h1 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.hero p {
+    font-style: italic;
+    color: #888;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Reduced gap from 15px to 10px */
+    padding: 10px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets/laptops */
+    }
+}
+
+.item {
+    background: #fff;
+    width: 90%; /* Makes the card fill most of the screen width */
+    max-width: 400px;
+    border: 1px solid #f0f0f0;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Adds a subtle shadow to make it pop */
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.item h3 {
+    font-size: 1.2rem;
+    margin: 20px 0 5px;
+    color: #222;
+}
+
+.item p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.buy-btn {
+    display: block;
+    background-color: var(--accent-gold);
+    color: white;
+    text-align: center;
+    padding: 18px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    transition: background 0.4s ease;
+}
+
+.buy-btn:hover {
+    background-color: #b38f4d; /* Slightly darker gold on tap */
+}
+
+/* Bottom Sections Styling */
+.about-section, .newsletter {
+    padding: 60px 10px; /* Adds space above and below the text */
+    text-align: center;
+    border-top: 1px solid var(--border-light);
+}
+
+.newsletter h3, .about-section h2 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.email-input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    width: 60%;
+    margin-bottom: 10px;
+    font-family: serif;
+}
+
+.dark-btn {
+    background: #1a1a1a;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Apply the elegant font to Brand Name and Main Titles */
+.logo, h1, h2, h3 {
+    font-family: var(--font-header);
+    font-weight: 400;
+}
+
+.logo {
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+/* Keep the buttons and links clean with the Sans-Serif font */
+nav ul li a, .buy-btn, .dark-btn, p {
+    font-family: var(--font-body);
+    letter-spacing: 1px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: var(--font-header);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 40px 0 20px;
+    font-size: 1.5rem;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--border-light);
+    width: 60%;
+    margin: 40px auto;
+}
+
+.image-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Category Filter Menu */
+.category-filter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.filter-btn {
+    text-decoration: none;
+    color: var(--text-dark);
+    border: 1px solid var(--border-light);
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    background: var(--accent-gold);
+    color: white;
+}
+/* This class hides items that don't match the filter */
+.filter-item {
+    display: block;
+}
+
+.hide {
+    display: none !important;
+}
+
+/* Make sure the buttons look like buttons, not links */
+.filter-btn {
+    cursor: pointer;
+    outline: none;
+    background: white;
+}
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--accent-gold); /* Using your gold color */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px; /* Rounded pill shape */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Soft shadow for depth */
+    z-index: 1000;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:active {
+    transform: scale(0.95); /* Slight shrink when tapped */
+}
+
+.wa-icon {
+    font-size: 1.2rem;
+}
+
+/* On very small screens, we can hide the text and just show the bubble */
+@media (max-width: 400px) {
+    .wa-text {
+        display: none;
+    }
+    .whatsapp-float {
+        padding: 12px;
+        border-radius: 50%;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+.brand-seal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background-color: #fafafa; /* Very light grey to make the white badge pop */
+}
+
+.brand-seal {
+    width: 150px;
+    height: 150px;
+    border: 1px solid var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+}
+
+.seal-inner {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: white;
+}
+
+.seal-top {
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+.seal-middle {
+    font-family: var(--font-header);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
+
+.seal-bottom {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-gold);
+    font-weight: 600;
+}
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1/1; /* This makes all images a perfect square */
+    object-fit: cover; /* This "zooms in" to fill the square without stretching the pattern */
+    display: block;
+    border-bottom: 1px solid var(--border-light);
+}
+.view-all-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.view-all-btn:hover {
+    background: var(--accent-gold);
+    color: white;
+}
+
+/* Special styling for the Styles Page images */
+.styles-grid .product-card img {
+    aspect-ratio: 2/3; /* Taller images for full-length outfits */
+    object-fit: cover;
+}
