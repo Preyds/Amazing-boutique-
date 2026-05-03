@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handmade Fashion Boutique</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+      <div class="logo">AMAZING FASHION <span style="font-weight:300;">WORLD</span></div>
+        <ul>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Handmade Elegance</h1>
+        <p>Custom outfits made with love.</p>
+    </header>
+
+<nav class="category-filter">
+    <a href="index.html" class="filter-btn">Home</a>
+    <a href="styles.html" class="filter-btn">Styles</a>
+    <a href="fabric.html" class="filter-btn">Fabrics</a>
+</nav>
+
+
+<div class="grid">
+    <div class="product-card filter-item styles">
+        <img src="images/outfit1.jpg" alt="Gown">
+        <h3>Floral Summer Gown</h3>
+        <p>₦25,000</p>
+        <a href="https://wa.me/2347048278105?text=I%20want%20the%20Gown" class="buy-btn">Order</a>
+    </div>
+
+    <div class="product-card filter-item styles">
+        <img src="images/outfit2.jpg" alt="Set">
+        <h3>Handmade Custom Set</h3>
+        <p>₦18,000</p>
+        <a href="https://wa.me/2347048278105?text=I%20want%20the%20Set" class="buy-btn">Order</a>
+        
+        <div style="text-align: center; padding: 20px;">
+    <a href="styles.html" class="view-all-btn">View Full Collection →</a>
+</div>
+        
+    </div>
+<div class="product-card filter-item fabrics">
+    <img src="images/fabric1.jpg" alt="Fabric Name">
+    <h3>Fabric Name</h3>
+    <p>₦ Price / yard</p>
+    <a href="https://wa.me/2347048278105?text=I'm%20interested%20in%20fabric%201" class="buy-btn">Order Fabric</a>
+</div>
+<div class="product-card filter-item fabrics">
+    <img src="images/fabric2.jpg" alt="Fabric Name">
+    <h3>Fabric Name</h3>
+    <p>₦ Price / yard</p>
+    <a href="https://wa.me/2347048278105?text=I'm%20interested%20in%20fabric%201" class="buy-btn">Order Fabric</a>
+</div>
+<div class="product-card filter-item fabrics">
+    <img src="images/fabric3.jpg" alt="Fabric Name">
+    <h3>Fabric Name</h3>
+    <p>₦ Price / yard</p>
+    <a href="https://wa.me/2347048278105?text=I'm%20interested%20in%20fabric%201" class="buy-btn">Order Fabric</a>
+</div>
+<div class="product-card filter-item fabrics">
+    <img src="images/fabric4.jpg" alt="Fabric Name">
+    <h3>Fabric Name</h3>
+    <p>₦ Price / yard</p>
+    <a href="https://wa.me/2347048278105?text=I'm%20interested%20in%20fabric%201" class="buy-btn">Order Fabric</a>
+</div>
+<div style="text-align: center; padding: 20px;">
+    <a href="fabric.html" class="view-all-btn">View Full Collection →</a>
+</div>
+
+</div> </section>
+
+<div class="brand-seal-container">
+    <div class="brand-seal">
+        <div class="seal-inner">
+            <span class="seal-top">Authentic</span>
+            <span class="seal-middle">HANDMADE</span>
+            <span class="seal-bottom">In Nigeria</span>
+        </div>
+    </div>
+</div>
+
+    <div class="about-designer">
+        <h3>About the Designer</h3>
+        <p>Handcrafting unique styles in Nigeria since 2026.</p>
+    </div>
+<section class="reviews-section">
+    <h2 class="section-title">Client Love</h2>
+    <div class="reviews-container">
+        <div class="review-card">
+            <p class="quote">"The fit of the Floral Summer Gown is absolutely perfect. I got so many compliments!"</p>
+            <p class="client-name">— Adanna O.</p>
+        </div>
+        <div class="review-card">
+            <p class="quote">"Fast delivery and the fabric quality is top-notch. Will definitely order again."</p>
+            <p class="client-name">— Blessing J.</p>
+        </div>
+    </div>
+</section>
+
+    <div class="newsletter-section">
+        <h3>JOIN THE INNER CIRCLE</h3>
+        <p>Get notified when we drop a new handmade pieces.</p>
+        <form>
+            <input type="email" placeholder="Your Email Address">
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+    </div>
+</div>
+
+</section>
+<script>
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filter-item");
+  if (c == "all") c = "";
+  
+  // Add the "hide" class to the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    // First, show everything
+    x[i].classList.remove("hide");
+    
+    // If the category doesn't match and isn't "all", hide it
+    if (x[i].className.indexOf(c) <= -1) {
+      x[i].classList.add("hide");
+    }
+  }
+
+  // Update the Active button look
+  var btns = document.getElementsByClassName("filter-btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+}
+</script>
+<a href="https://wa.me/2347048278105?text=Hello!%20I'm%20visiting%20your%20website%20and%20had%20a%20question." class="whatsapp-float" target="_blank">
+    <span class="wa-icon">💬</span>
+    <span class="wa-text">Chat with us</span>
+</a>
+
+</body>
+</html>
+
+<footer>
+    <p><div class="social-links">
+    <a href="https://instagram.com/ojatahesther" target="_blank" class="social-icon">Instagram</a>
+    <a href="https://tiktok.com/@amazingfashion87" target="_blank" class="social-icon">TikTok</a>
+</div>
+</footer>
+
